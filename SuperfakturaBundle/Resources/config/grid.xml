@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services">
+    <parameters>
+        <parameter key="application_superfaktura.superfaktura_form_list.class">Application\SuperfakturaBundle\Grid\SuperfakturaGrid</parameter>
+    </parameters>
+
+    <services>
+        <service id="application_superfaktura.grid.superfaktura_list" class="%application_superfaktura.superfaktura_form_list.class%">
+            <tag name="zita_datagrid.grid" />
+            <argument type="service" id="service_container" />
+            <argument>%application_superfaktura.superfaktura.class%</argument>
+        </service>
+    </services>
+</container>

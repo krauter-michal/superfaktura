@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="application_superfaktura.superfaktura_list" path="/admin/superfaktura/list">
+        <default key="_controller">ApplicationSuperfakturaBundle:Superfaktura:list</default>
+        <option key="type">admin</option>
+    </route>
+
+    <route id="application_superfaktura.create_superfaktura" path="/admin/superfaktura/create">
+        <default key="_controller">ApplicationSuperfakturaBundle:Superfaktura:create</default>
+        <option key="type">admin</option>
+    </route>
+
+    <route id="application_superfaktura.update_superfaktura" path="/admin/superfaktura/update/{id}">
+        <default key="_controller">ApplicationSuperfakturaBundle:Superfaktura:update</default>
+        <option key="type">admin</option>
+    </route>
+
+    <route id="application_superfaktura.delete_superfaktura" path="/admin/superfaktura/delete/{id}">
+        <default key="_controller">ApplicationSuperfakturaBundle:Superfaktura:delete</default>
+        <option key="type">admin</option>
+    </route>
+
+    <route id="application_superfaktura.export" path="/admin/superfaktura/export/{orderId}">
+        <default key="_controller">ApplicationSuperfakturaBundle:Superfaktura:export</default>
+        <option key="type">admin</option>
+    </route>
+
+    <route id="application_superfaktura.export_order_list" path="/admin/superfaktura/export/order-list/{orderId}">
+        <default key="_controller">ApplicationSuperfakturaBundle:Superfaktura:exportOrderList</default>
+        <option key="type">admin</option>
+    </route>
+</routes>

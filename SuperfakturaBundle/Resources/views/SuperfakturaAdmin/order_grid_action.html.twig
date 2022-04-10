@@ -1,0 +1,15 @@
+{# admin - order grid - akce - slickgrid akce #}
+<div class="form-row-value">
+    {% if order and order.isSuperfakturaExported() %}
+        {{ "application_superfaktura.order_grid.superfaktura_action.exported"|trans }}
+    {% else %}
+        <a
+            href="{{ path('application_superfaktura.export_order_list', {orderId: item.id}) }}"
+            title="{{ "application_superfaktura.order_grid.superfaktura_action.export_title"|trans }}"
+            rel="twipsy"
+            style="cursor: pointer; text-decoration: underline;"
+        >
+            {{ "application_superfaktura.order_grid.superfaktura_action.export"|trans }}
+        </a>
+    {% endif %}
+</div>

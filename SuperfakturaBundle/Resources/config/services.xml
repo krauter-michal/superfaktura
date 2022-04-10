@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="application_superfaktura.superfaktura.class">Application\SuperfakturaBundle\Entity\Superfaktura</parameter>
+        <parameter key="application_superfaktura.superfaktura_form_type.class">Application\SuperfakturaBundle\Form\SuperfakturaType</parameter>
+        <parameter key="application_superfaktura.superfaktura_manager.class">Application\SuperfakturaBundle\Entity\SuperfakturaManager</parameter>
+    </parameters>
+
+    <services>
+        <service id="application_superfaktura.superfaktura_factory" class="Application\SuperfakturaBundle\Factory\SuperfakturaFactory">
+        </service>
+
+        <service id="application_superfaktura.superfaktura_type" class="%application_superfaktura.superfaktura_form_type.class%">
+            <tag name="form.type"/>
+        </service>
+
+        <service id="application_superfaktura.superfaktura_manager" class="%application_superfaktura.superfaktura_manager.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument type="collection">
+                <argument key="">%application_superfaktura.superfaktura.class%</argument>
+                <argument key="superfaktura">%application_superfaktura.superfaktura.class%</argument>
+            </argument>
+        </service>
+    </services>
+
+</container>

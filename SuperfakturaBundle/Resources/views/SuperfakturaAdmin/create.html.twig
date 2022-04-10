@@ -1,0 +1,38 @@
+{# admin - prodavacka - vytvoreni #}
+{% extends "WebgetAdminBundle::form-singlepanel.html.twig" %}
+
+{% block page_name %}
+    {{ "application_superfaktura.create_superfaktura"|trans }}
+{% endblock page_name %}
+
+{% block page_main_action %}
+    {{ button_submit_success("application_superfaktura.save", {"id": "save"}) }}
+    {{ button_submit_success("application_superfaktura.save_and_stay", {"id":"save-and-stay", "name": "stay", "value": 1}) }}
+{% endblock %}
+
+{% block whole_content %}
+    {% form path('application_superfaktura.create_superfaktura') %}
+        {{ parent() }}
+    {% endform %}
+{% endblock %}
+
+{% block form_rows %}
+    {{ form_errors(form) }}
+
+    {{ form_row(form.default) }}
+    {{ form_row(form.internalName) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.apiKey) }}
+    {{ form_row(form.logoId) }}
+    {{ form_row(form.exchangeRate) }}
+    {{ form_row(form.numericalSeries) }}
+    {{ form_row(form.eshopName) }}
+    {{ form_row(form.prefix) }}
+    {{ form_row(form.invoiceName) }}
+    {{ form_row(form.invoicePhone) }}
+    {{ form_row(form.invoiceEmail) }}
+    {{ form_row(form.invoiceWeb) }}
+    {{ form_row(form.apiEndpoint) }}
+
+    {{ form_row(form._token) }}
+{% endblock %}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          http://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd"
+                  xmlns:gedmo="http://gediminasm.org/schemas/orm/doctrine-extensions-mapping">
+
+    <entity name="Application\SuperfakturaBundle\Entity\Superfaktura"
+            table="application_superfaktura">
+        <discriminator-column name="discr" type="string" length="100" />
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO" />
+        </id>
+        <field name="internalName" column="internal_name" type="text" nullable="false"/>
+        <field name="default" column="`default`" type="boolean" nullable="false" />
+        <field name="email" column="email" type="string" nullable="true"/>
+        <field name="apiKey" column="api_key" type="string" nullable="false"/>
+        <field name="logoId" column="logo_id" type="string" nullable="true"/>
+        <field name="exchangeRate" column="exchange_rate" type="string" nullable="true"/>
+        <field name="numericalSeries" column="numerical_series" type="string" nullable="true"/>
+        <field name="eshopName" column="eshop_name" type="string" nullable="true"/>
+        <field name="prefix" column="prefix" type="string" length="10" nullable="true"/>
+        <field name="invoiceName" column="invoice_name" type="string" nullable="true"/>
+        <field name="invoicePhone" column="invoice_phone" type="string" nullable="true"/>
+        <field name="invoiceEmail" column="invoice_email" type="string" nullable="true"/>
+        <field name="invoiceWeb" column="invoice_web" type="string" nullable="true"/>
+        <field name="apiEndpoint" column="api_endpoint" type="string" nullable="true"/>
+    </entity>
+</doctrine-mapping>

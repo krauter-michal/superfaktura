@@ -1,0 +1,18 @@
+{# admin - prehled uctu Superfaktury #}
+{% extends "WebgetAdminBundle::template-singlepanel.html.twig" %}
+
+{% block page_name %}
+    {{ "application_superfaktura.superfaktura_list"|trans }}
+{% endblock page_name %}
+
+{% block page_main_action %}
+    {% if is_granted('ROLE_SUPERFAKTURA_CREATE') or is_granted('ROLE_ADMIN') %}
+        {{ _button_link("application_superfaktura.create_superfaktura", {"icon": "plus"}, path('application_superfaktura.create_superfaktura')) }}
+    {% endif %}
+{% endblock page_main_action %}
+
+{% block center_column %}
+    {% import "ZitaDataGridBundle:SlickGrid:macros.html.twig" as slickgrid %}
+
+    {{ slickgrid.datagrid(grid) }}
+{% endblock center_column %}

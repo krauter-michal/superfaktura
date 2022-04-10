@@ -1,0 +1,15 @@
+{# admin - seznam uctu superfaktury - slickgrid akce #}
+{% spaceless %}
+    {% if is_granted('ROLE_SUPERFAKTURA_EDIT') or is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('application_superfaktura.update_superfaktura', {"id": item.id}) }}" rel="twipsy" data-original-title="{{ "application_superfaktura.superfaktura.update"|trans }}" title="{{ "application_superfaktura.superfaktura.update"|trans }}">
+            <span class="icon icon-edit"></span>
+        </a>
+    {% endif %}
+
+    {% if is_granted('ROLE_SUPERFAKTURA_DELETE') or is_granted('ROLE_ADMIN') %}
+        <a onclick="return confirm({{ "application_superfaktura.superfaktura.delete.confirm"|trans|json_encode }});" href="{{ path('application_superfaktura.delete_superfaktura', {"id": item.id}) }}"
+           title="{{ "application_superfaktura.superfaktura.delete"|trans }}" rel="twipsy" data-original-title="{{ "application_superfaktura.superfaktura.delete"|trans }}">
+            <span class="icon icon-delete"></span>
+        </a>
+    {% endif %}
+{% endspaceless %}

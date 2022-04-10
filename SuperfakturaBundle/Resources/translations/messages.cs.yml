@@ -1,0 +1,36 @@
+application_superfaktury.superfaktura.default: Výchozí
+application_superfaktury.superfaktura.internal_name: Interní název
+application_superfaktury.superfaktura.email: E-mail
+application_superfaktury.superfaktura.api_key: API klíč
+application_superfaktury.superfaktura.logo_id: Logo ID
+application_superfaktury.superfaktura.exchange_rate: Kurz měny (vůči CZK)
+application_superfaktury.superfaktura.numerical_series: Číselná řada
+application_superfaktury.superfaktura.eshop_name: Zasílaný název e-shopu
+application_superfaktury.superfaktura.prefix: Prefix čísel objednávky
+application_superfaktury.superfaktura.invoice.name: Fakturu vystavil (jméno)
+application_superfaktury.superfaktura.invoice.phone: Fakturu vystavil (telefon)
+application_superfaktury.superfaktura.invoice.email: Fakturu vystavil (e-mail)
+application_superfaktury.superfaktura.invoice.web: Fakturu vystavil (web)
+application_superfaktury.superfaktura.api_endpoint: API Endpoint
+application_superfaktura.superfaktura.updated: Účet pro Superfaktury byl aktualizován
+application_superfaktura.superfaktura.deleted: Účet pro Superfaktury byl smazán
+application_superfaktura.superfaktura.created: Účet pro Superfaktury byl vytvořen
+application_superfaktura.superfaktura.update: Editovat účet pro Superfaktury
+application_superfaktura.superfaktura.delete: Smazat účet pro Superfaktury
+application_superfaktura.superfaktura.delete.confirm: Chcete opravdu tento účet smazat?
+application_superfaktura.create_superfaktura: Nový účet pro Superfaktury
+application_superfaktura.superfaktura_list: Účty pro Superfaktury
+application_superfaktura.edit_superfaktura: Upravit účet pro Superfaktury
+application_superfaktura.save: Uložit
+application_superfaktura.save_and_stay: Uložit a zůstat
+application_superfaktura.order.not_exported: Neexportováno
+application_superfaktura.list.header: Superfaktura
+application_superfaktura.order.export_button_label: Exportovat do Superfaktury
+application_superfaktura.order.exported: Export do Superfaktury
+application_superfaktura.order.exported.success: Objednávka byla v pořádku vyexportována
+application_superfaktura.order.exported.failed: Objednávku se nepodařilo vyexportovat
+
+application_superfaktura.order_grid.superfaktura_action.label: Superfaktura
+application_superfaktura.order_grid.superfaktura_action.exported: OK
+application_superfaktura.order_grid.superfaktura_action.export: Ne
+application_superfaktura.order_grid.superfaktura_action.export_title: Exportovat do Superfaktury
